@@ -33,17 +33,17 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height = 5
 let g:syntastic_python_checkers = ['pyflakes']
 
 " ctrlp, ctrlp-py-matcher
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore migrations
-      \ --ignore south_migrations
-      \ --ignore vendor
-      \ --ignore "**/*.pyc"
-      \ --ignore python2.7
-      \ --ignore gems
-      \ --ignore .codility-sass-cache
-      \ -g ""'
+let g:ctrlp_custom_ignore = { 
+    \ 'dir':  '\v[\/]\.(git)$',
+    \ 'file': '\v\.(exe|so|dll|pyc)$',
+    \ }
+
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+" status
+set laststatus=2
+set statusline+=%F
