@@ -44,6 +44,6 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
-" status
+" status, better with vim-airline
 set laststatus=2
 set statusline+=%F
