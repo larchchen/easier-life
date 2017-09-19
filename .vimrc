@@ -17,6 +17,7 @@ autocmd BufRead,BufNewFile  *.js,*.jsx,*.es6,*.html setlocal tabstop=2 shiftwidt
 autocmd BufRead,BufNewFile  *.txt setlocal spell spelllang=en_gb
 
 " colour scheme
+colorscheme default
 highlight Search ctermbg=190 ctermfg=124
 highlight Visual ctermbg=190 ctermfg=8
 highlight SpellBad ctermbg=160 ctermfg=11
@@ -47,3 +48,9 @@ let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 " status, better with vim-airline
 set laststatus=2
 set statusline+=%F
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0 
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=wheat1 ctermbg=228
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=khakil ctermbg=229
