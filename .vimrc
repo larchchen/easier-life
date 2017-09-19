@@ -44,6 +44,8 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" Alternatives to py-matcher: vim-cmatch
+" let g:ctrlp_match_func = { 'match': 'matcher#cmatch' }
 
 " status, better with vim-airline
 set laststatus=2
